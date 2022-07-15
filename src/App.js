@@ -2,7 +2,7 @@ import './App.css';
 import {useState, useEffect} from 'react';
 
 function App() {
-      const API = "https://kavi-node-app.herokuapp.com/";
+      const API = "https://kavi-node-app.herokuapp.com";
 
 //       const mobiles = [
 //   {
