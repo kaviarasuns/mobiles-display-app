@@ -38,7 +38,7 @@ function App() {
 
    useEffect(()=> getMobiles,[])
   return (
-    mobiles.length>0 ?  <PhoneRender mobiles={mobiles}/> : "Loading..."
+    mobiles.length !== 0 ?  <PhoneRender mobiles={mobiles}/> : "Loading..."
   )
 }
 
