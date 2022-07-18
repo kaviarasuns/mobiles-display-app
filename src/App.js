@@ -33,11 +33,13 @@ function App() {
       fetch(`${API}/mobiles`,{method: "GET"}
       ).then(data => data.json()).then(mobiles => setMobiles(mobiles));
   }
+  
+    console.log(mobiles);
 
    useEffect(()=> getMobiles,[])
   return (
-    mobiles ?  <PhoneRender mobiles={mobiles}/> : "Loading..."
-  );
+    mobiles.length>0 ?  <PhoneRender mobiles={mobiles}/> : "Loading..."
+  )
 }
 
 
