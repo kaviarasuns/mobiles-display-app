@@ -25,9 +25,7 @@ function App() {
 //     company: "Xiomi"
 //   }
 // ];
-
-
-      const API = "https://kavi-node-app.herokuapp.com";
+  const API = "https://kavi-node-app.herokuapp.com";
 
     const [mobiles, setMobiles] = useState([]);
 
@@ -37,15 +35,22 @@ function App() {
   }
 
    useEffect(()=> getMobiles,[])
-
-      
   return (
-    <div className="phone-list-container">
-   mobiles ?  {mobiles.map((mobile) => <Phone key={mobile._id} mobile={mobile}/>)} : "Loading...";
-    </div> 
+    mobiles ?  <PhoneRender mobiles={mobiles}/> : "Loading..."
   );
 }
 
+
+
+function PhoneRender({mobiles}){
+
+return(
+  <div className="phone-list-container">
+    {mobiles.map((mobile) => <Phone key={mobile._id} mobile={mobile}/>)}
+  </div> 
+)
+
+}
 
 export default App;
 
