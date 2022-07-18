@@ -27,7 +27,7 @@ function App() {
 // ];
   const API = "https://kavi-node-app.herokuapp.com";
 
-    const [mobiles, setMobiles] = useState([]);
+    const [mobiles, setMobiles] = useState(null);
 
   const getMobiles = () => {
       fetch(`${API}/mobiles`,{method: "GET"}
@@ -38,7 +38,7 @@ function App() {
 
    useEffect(()=> getMobiles,[])
   return (
-    mobiles.length !== 0 ?  <PhoneRender mobiles={mobiles}/> : "Loading..."
+    mobiles ?  <PhoneRender mobiles={mobiles}/> : "Loading..."
   )
 }
 
