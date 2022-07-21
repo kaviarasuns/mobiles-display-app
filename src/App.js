@@ -25,7 +25,7 @@ function App() {
 //     company: "Xiomi"
 //   }
 // ];
-  const API = "https://guvi-node-app.herokuapp.com";
+  const API = "https://kavi-node-app.herokuapp.com";
 
     const [mobiles, setMobiles] = useState(null);
 
