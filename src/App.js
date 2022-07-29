@@ -36,7 +36,7 @@ function App() {
   
     console.log(mobiles);
 
-   useEffect(()=> getMobiles,[])
+   useEffect(()=> getMobiles(),[])
   return (
     mobiles ?  <PhoneRender mobiles={mobiles}/> : "Loading..."
   )
